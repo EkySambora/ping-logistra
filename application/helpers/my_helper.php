@@ -19,3 +19,18 @@ function generateRandomString($length = 32) {
     return $randomString;
 }
 
+function bonus($params, $gaji){
+    $hasil = null;
+    if($params > 50 && $params < 70){
+        $hasil = 50/100 * $gaji;
+    }else if($params > 70 && $params < 85){
+        $hasil = 75/100 * $gaji;
+    }else if($params > 85){
+        $hasil = 100/100 * $gaji;
+    }else if($params < 50){
+        $hasil = 0;
+    }
+
+    return $hasil;
+}
+

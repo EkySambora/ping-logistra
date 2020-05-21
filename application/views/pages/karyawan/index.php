@@ -71,7 +71,7 @@
 							<div class="modal-body">
 								<div class="form-group">
 									<label for="exampleInputEmail1">Nilai</label>
-									<input type="number" placeholder="Isikan Nilai Disini" name="nilai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+									<input type="number" min="10" max="100" placeholder="Isikan Nilai Disini" name="nilai" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
 									<input type="hidden" name="id" value="<?php echo $row->id_karyawan; ?>">
 									<input type="hidden" name="nik" value="<?php echo $row->nik; ?>">
 									<input type="hidden" name="nama" value="<?php echo $row->nama; ?>">

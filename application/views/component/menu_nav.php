@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col">
             <nav class="navbar navbar-expand-lg navbar-light border-bottom">
-                <a class="navbar-brand" href="<?php echo site_url('home'); ?>">MyApp</a>
+                <a class="navbar-brand" href="<?php echo site_url('home'); ?>">Laporan</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                     
