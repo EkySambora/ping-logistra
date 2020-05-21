@@ -14,24 +14,23 @@ class Departemen extends My_Controller {
 
 	public function add()
 	{
-        // $salary = $this->input->post('salary');
-        // $nilai = $this->input->post('nilai');
-        // $this->gaji_m->insert_gaji($this->_table,[
-        //     'salary' => $salary,
-        //     'nilai'  => $nilai
-        // ]);
-        // redirect('gaji');
+        $nama_departemen = $this->input->post('nama_departemen');
+        $id_gaji_karyawan = $this->input->post('id_gaji_karyawan');
+        $this->departemen_m->insert($this->_table,[
+            'nama_departemen' => $nama_departemen,
+            'id_gaji_karyawan'  => $id_gaji_karyawan
+        ]);
+        redirect('departemen');
 	}
 
     public function update()
     {
-        // $post = $this->input->post();
-        // $this->id_gaji = $post["id"];
-        // $this->salary = $post["salary"];
-        // $this->nilai = $post["nilai"];
+        $post = $this->input->post();
+        $this->id_departemen = $post["id"];
+        $this->nama_departemen = $post["nama_departemen"];
 
-        // $this->db->update($this->_table, $this, array('id_gaji' => $post['id']));
-        // redirect("gaji");
+        $this->db->update($this->_table, $this, array('id_departemen' => $post['id']));
+        redirect("departemen");
     }
 
 	public function delete($id_departemen)

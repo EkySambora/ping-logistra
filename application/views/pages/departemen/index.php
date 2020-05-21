@@ -11,7 +11,7 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">No</th>
-                        <th scope="col">Salary</th>
+                        <th scope="col">Departemen <?php echo $this->uri->segment('2') ?></th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
@@ -79,8 +79,8 @@
 
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Salary</label>
-                                <input type="number" name="salary" placeholder="Isi Gaji" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <input type="hidden" name="nilai" value="0">
+                                <input type="text" name="nama_departemen" placeholder="Isi Departemen" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <input type="hidden" name="id_gaji_karyawan" value="0">
                             </div>
 
                     </div>
@@ -109,12 +109,12 @@
                     </button>
                 </div>
                 <!-- <form> -->
-                <?php echo form_open('gaji/update');?>
+                <?php echo form_open('departemen/update');?>
                     <div class="modal-body">
                         <input type="hidden" name="id" value="<?php echo $row->id_departemen?>" />
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Salary</label>
-                            <input type="number" name="salary" placeholder="Isi Gaji" class="form-control" id="exampleInputEmail1" value="<?php echo $row->salary ?>" aria-describedby="emailHelp">
+                            <label for="exampleInputEmail1">Departemen</label>
+                            <input type="text" name="nama_departemen" placeholder="Isi Nama Departemen" class="form-control" id="exampleInputEmail1" value="<?php echo $row->nama_departemen ?>" aria-describedby="emailHelp">
                             <input type="hidden" name="nilai" value="0">
                         </div>
 

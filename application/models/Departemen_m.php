@@ -14,7 +14,7 @@ class Departemen_m extends CI_Model{
         return $query->result();
     }
 
-    public function insert_gaji($tableName, $data){
+    public function insert($tableName, $data){
         $query = $this->db->insert($tableName, $data);
     }
 
