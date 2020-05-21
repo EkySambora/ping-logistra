@@ -1,20 +1,20 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
  
-class Karyawan_m extends CI_Model{
+class Gaji_m extends CI_Model{
 
-    public function get_karyawan(){
+    public function get_gaji(){
         $this->db->select("*");
-        $this->db->from("karyawan k");
-        $this->db->join("departemen d", "d.id_departemen = k.departemen_id");
-        $this->db->join("gaji_karyawan g", "g.id_gaji = d.id_gaji_karyawan");
-        $this->db->order_by('k.id_karyawan','desc');  
+        $this->db->from("gaji_karyawan gk");
+        // $this->db->join("departemen d", "d.id_departemen = k.departemen_id");
+        // $this->db->join("gaji_karyawan g", "g.id_gaji = d.id_gaji_karyawan");
+        $this->db->order_by('gk.id_gaji','desc');  
         $query = $this->db->get();
 
         return $query->result();
     }
 
-    public function insert_karyawan($tableName, $data){
+    public function insert_gaji($tableName, $data){
         $query = $this->db->insert($tableName, $data);
     }
 
@@ -23,7 +23,7 @@ class Karyawan_m extends CI_Model{
 
     }
 
-    public function hapus_data_karyawan($where, $table){
+    public function hapus_data_gaji($where, $table){
 		$this->db->where($where);
         $this->db->delete($table);
     }
