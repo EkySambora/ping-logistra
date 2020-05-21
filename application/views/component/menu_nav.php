@@ -9,7 +9,7 @@
                 </button>
                 <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="<?php echo site_url('home') ?>">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link active" href="<?php echo site_url('karyawan') ?>">Karyawan <span class="sr-only">(current)</span></a>
                         <a class="nav-item nav-link" href="<?php echo site_url('gaji') ?>">Gaji</a>
                         <a class="nav-item nav-link" href="<?php echo site_url('departemen') ?>">Departemen</a>
                         <!-- <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a> -->

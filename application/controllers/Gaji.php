@@ -15,10 +15,8 @@ class Gaji extends My_Controller {
 	public function add()
 	{
         $salary = $this->input->post('salary');
-        $nilai = $this->input->post('nilai');
         $this->gaji_m->insert_gaji($this->_table,[
             'salary' => $salary,
-            'nilai'  => $nilai
         ]);
         redirect('gaji');
 	}
@@ -28,7 +26,6 @@ class Gaji extends My_Controller {
         $post = $this->input->post();
         $this->id_gaji = $post["id"];
         $this->salary = $post["salary"];
-        $this->nilai = $post["nilai"];
 
         $this->db->update($this->_table, $this, array('id_gaji' => $post['id']));
         redirect("gaji");

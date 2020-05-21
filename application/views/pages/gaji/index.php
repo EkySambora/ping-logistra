@@ -22,7 +22,7 @@
                     ?>
                         <tr>
                             <th scope="row"><?php echo $no ?></th>
-                            <td><?php echo $row->salary ?></td>
+                            <td><?php echo rupiah($row->salary) ?></td>
 
                             <td class="d-flex">
                                 <button type="button" class="btn btn-warning mr-2" data-toggle="modal" data-target="#exampleModalEdit<?php echo $row->id_gaji; ?>">Edit</button>
@@ -63,6 +63,7 @@
             </div>
         </div>
     <?php endforeach; ?> 
+
     <!-- modal tambah -->
     <div class="modal fade" id="exampleModal_add" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -77,11 +78,10 @@
                 <?php echo form_open('gaji/add');?>
                     <div class="modal-body">
 
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Salary</label>
-                                <input type="number" name="salary" placeholder="Isi Gaji" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <input type="hidden" name="nilai" value="0">
-                            </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Salary</label>
+                            <input type="number" name="salary" placeholder="Isi Gaji" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
 
                     </div>
                     <div class="modal-footer">
@@ -115,7 +115,6 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Salary</label>
                             <input type="number" name="salary" placeholder="Isi Gaji" class="form-control" id="exampleInputEmail1" value="<?php echo $row->salary ?>" aria-describedby="emailHelp">
-                            <input type="hidden" name="nilai" value="0">
                         </div>
 
                     </div>

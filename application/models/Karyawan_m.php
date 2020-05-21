@@ -6,8 +6,8 @@ class Karyawan_m extends CI_Model{
     public function get_karyawan(){
         $this->db->select("*");
         $this->db->from("karyawan k");
-        $this->db->join("departemen d", "d.id_departemen = k.departemen_id");
-        $this->db->join("gaji_karyawan g", "g.id_gaji = d.id_gaji_karyawan");
+        // $this->db->join("departemen d", "d.id_departemen = k.departemen_id");
+        // $this->db->join("gaji_karyawan g", "g.id_gaji = d.id_gaji_karyawan");
         $this->db->order_by('k.id_karyawan','desc');  
         $query = $this->db->get();
 
@@ -23,9 +23,9 @@ class Karyawan_m extends CI_Model{
 
     }
 
-    public function hapus_data_karyawan($where, $table){
+    public function delete_karyawan($tableName,$where){
 		$this->db->where($where);
-        $this->db->delete($table);
+        $this->db->delete($tableName);
     }
     
     public function get_departemen(){

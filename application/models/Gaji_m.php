@@ -16,11 +16,12 @@ class Gaji_m extends CI_Model{
 
     public function insert_gaji($tableName, $data){
         $query = $this->db->insert($tableName, $data);
+        return $query;
     }
 
-    public function update_karyawan($tableName, $data, $where){
+    public function update_gaji($tableName, $data, $where){
         $query = $this->db->update($tableName, $data, $where);
-
+        return $query;
     }
 
     public function hapus_data_gaji($where, $table){

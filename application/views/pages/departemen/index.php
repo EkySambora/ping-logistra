@@ -114,7 +114,7 @@
                         <input type="hidden" name="id" value="<?php echo $row->id_departemen?>" />
                         <div class="form-group">
                             <label for="exampleInputEmail1">Departemen</label>
-                            <input type="text" name="nama_departemen" placeholder="Isi Nama Departemen" class="form-control" id="exampleInputEmail1" value="<?php echo $row->nama_departemen ?>" aria-describedby="emailHelp">
+                            <input require type="text" name="nama_departemen" placeholder="Isi Nama Departemen" class="form-control" id="exampleInputEmail1" value="<?php echo $row->nama_departemen ?>" aria-describedby="emailHelp">
                             <input type="hidden" name="nilai" value="0">
                         </div>
 
