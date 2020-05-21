@@ -18,11 +18,6 @@ class Departemen_m extends CI_Model{
         $query = $this->db->insert($tableName, $data);
     }
 
-    public function update_karyawan($tableName, $data, $where){
-        $query = $this->db->update($tableName, $data, $where);
-
-    }
-
     public function hapus_data($where, $table){
 		$this->db->where($where);
         $this->db->delete($table);

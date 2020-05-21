@@ -6,8 +6,10 @@ class Karyawan_m extends CI_Model{
     public function get_karyawan(){
         $this->db->select("*");
         $this->db->from("karyawan k");
-        // $this->db->join("departemen d", "d.id_departemen = k.departemen_id");
+        $this->db->join("status_cat s", "s.id_status = k.status");
+        $this->db->join("pendidikan_cat p", "p.id_pendidikan_cat = k.pendidikan");
         // $this->db->join("gaji_karyawan g", "g.id_gaji = d.id_gaji_karyawan");
+
         $this->db->order_by('k.id_karyawan','desc');  
         $query = $this->db->get();
 
@@ -16,11 +18,7 @@ class Karyawan_m extends CI_Model{
 
     public function insert_karyawan($tableName, $data){
         $query = $this->db->insert($tableName, $data);
-    }
-
-    public function update_karyawan($tableName, $data, $where){
-        $query = $this->db->update($tableName, $data, $where);
-
+        return $query;
     }
 
     public function delete_karyawan($tableName,$where){
@@ -31,7 +29,7 @@ class Karyawan_m extends CI_Model{
     public function get_departemen(){
         $this->db->select("*");
         $this->db->from("departemen d");
-        $this->db->join("gaji_karyawan g", "g.id_gaji = d.id_gaji_karyawan");
+        // $this->db->join("gaji_karyawan g", "g.id_gaji = d.id_gaji_karyawan");
         $this->db->order_by('d.id_departemen','desc');  
         $query = $this->db->get();
 
