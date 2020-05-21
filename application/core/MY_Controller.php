@@ -7,5 +7,7 @@ class My_Controller extends CI_Controller
 		parent::__construct();
 		$this->load->model('Karyawan_m','karyawan_m');
 		$this->load->model('Gaji_m','gaji_m');
+		$this->load->model('Departemen_m','departemen_m');
+
 	}
 }
